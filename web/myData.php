@@ -8,7 +8,7 @@
     <h1>My Media</h1>
 </head>
 <body>
-​
+<?php
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -33,6 +33,6 @@ catch (PDOException $ex)
 
 $statement = $db->query('SELECT Movies, TV, Music, Books FROM media');
 $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-​
+?>
 </body>
 </html>
